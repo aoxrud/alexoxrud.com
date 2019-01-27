@@ -28,7 +28,7 @@ var paths = {
  * matching file name. index.pug - index.pug.json
  */
 gulp.task('pug', function () {
-  return gulp.src('./src/**/*.pug')
+  return gulp.src('./src/index.pug')
     .pipe(data(function (file) {
       let dataFile = './src/'+path.basename(file.path) + '.json';
       if (fs.existsSync(dataFile)) {
