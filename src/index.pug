@@ -1,0 +1,143 @@
+include mixins
+
+doctype
+html(lang="en")
+  head
+    title=siteTitle
+    link(rel="shortcut icon" href="images/favicon.png")
+    link(rel="manifest" href="/manifest.json")
+    link(href="https://fonts.gstatic.com" rel="preconnect" crossorigin="")
+    link(href="https://www.google-analytics.com", rel="dns-prefetch")
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2")
+    meta(name="description", content=bio)
+    meta(name="author", content=author)
+    meta(name="theme-color", content="#613D62")
+    meta(property="og:title", content=siteTitle)
+    meta(property="og:image", content="http://"+url+"/"+profileImageSocial)
+    meta(property="og:image:secure_url", content="https://"+url+"/"+profileImageSocial)
+    meta(property="og:image:type" content="image/jpeg")
+    meta(property="og:image:height" content="224")
+    meta(property="og:image:width" content="224")
+
+    meta(property="og:description", content=bio)
+    meta(property="twitter:title", content=siteTitle)
+    meta(property="twitter:image", content="http://"+url+"/"+profileImage)
+
+
+
+
+
+    style
+      include ../public/css/initial-render.css
+
+  body
+    header.profile(itemscope, itemtype="http://schema.org/LocalBusiness" itemref="telephone email location")
+      .max-width
+        .profile-content
+          img.profile-image(src=profileImage, alt=author, srcset=profileImage+" "+profileImageWidth+"w", width=profileImageWidth, height=profileImageHeight, itemprop="image")
+          .profile-overview
+            h3.profile-slogan=slogan
+            h1.profile-name(itemprop="name")=author
+            h2.profile-bio=bio
+            .profile-cta-container
+              a.profile-cta(href="#contact", onclick="return navigateTo('contact')") Get in Touch
+
+    main
+      nav.navigation-content
+        .navigation-container
+          .max-width
+            ul.navigation
+              li.nav-item
+                a(href="#about", onclick="return navigateTo('about')") About
+              li.nav-item
+                a(href="#portfolio", onclick="return navigateTo('portfolio')") Portfolio
+              li.nav-item
+                a(href="#contact", onclick="return navigateTo('contact')") Contact
+
+      section.about-me#about
+        .about-container
+          .max-width
+            h2.about-title.main-title About Me
+            p.about-content=aboutMe
+
+
+      section.portfolio#portfolio
+        .portfolio-header
+          .max-width
+            h2.portfolio-title.main-title#portfolio-heading Portfolio
+
+        ul.projects-list.visible(aria-describedby="portfolio-heading")
+          - var projectCount = 0;
+          while projectCount < PROJECTS_DISPLAY
+            li.projects-item
+              +project(projects[projectCount++])
+
+        .view-more
+          button.button(onclick="viewMoreProjects()") View More Projects
+
+        .more-projects
+          ul.projects-list(aria-label="More Projects I've Worked On")
+            - var projectCount = PROJECTS_DISPLAY;
+            while projectCount < projects.length
+              li.projects-item
+                +project(projects[projectCount++])
+
+
+    footer#contact
+      .max-width
+        h2.footer-title#get-in-touch Get in touch
+
+        .row
+          ul.reach-out(aria-labelledby="get-in-touch")
+            li
+              a(href="tel:"+phoneNumber)
+                +icon-smartphone
+                span(id="telephone" itemprop="telephone")=phoneNumber
+            li
+              a(href="mailto:"+emailAddress)
+                +icon-email
+                span(id="email", itemprop="email")=emailAddress
+            li
+              +icon-location
+              span(id="location", itemprop="addressLocality")=location
+            li
+              a(href=linkedinUrl)
+                +icon-linkedin
+                span Linkedin
+
+
+
+        .footer
+          p.copyright 2019 &copy; Copyright alexoxrud.com
+
+    noscript#deferred-styles
+      link(rel='stylesheet', type='text/css', href='css/index.css')
+      link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Raleway:300,400,700')
+
+    script(src='vendor.js', async)
+    script(src='index.js', async)
+
+    script.
+      //Deferred Styles
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+
+      //Google Analytics
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-102582189-1', 'auto');
+      ga('send', 'pageview');

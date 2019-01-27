@@ -1,0 +1,336 @@
+$edge-padding: 20px;
+$small-screen: 736px;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(250, 251, 252);
+  color: #070049;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  min-width: 320px;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, ul, li {
+  margin: 0;
+  padding: 0;
+}
+ul, li {
+  list-style-type: none;
+}
+
+.max-width {
+  max-width: 990px;
+  margin: 0 auto;
+}
+
+.main-title {
+  color: rgba(0,0,0,1);
+  font-size: 1.6em;
+  line-height: 36px;
+  font-weight: 300;
+}
+
+.profile {
+  background: linear-gradient(-30deg, rgba(24, 40, 72, 0.4) 0%, rgba(24, 40, 72, 1) 90%) rgb(159, 80, 120);
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 1.1px;
+
+  .profile-content {
+    padding: 3em $edge-padding;
+    display: flex;
+    margin: 0 auto;
+    flex-shrink: 0;
+
+    @media (max-width: $small-screen) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .profile-cta-container {
+    margin-top: $edge-padding;
+    order: 10;
+
+    @media (max-width: $small-screen) {
+      text-align: center;
+    }
+  }
+  .profile-cta {
+    text-decoration: none;
+    padding: 0.5em 1em;
+    background-color: rgba(132, 89, 144, 1);
+    color: rgba(255,255,255,1);
+    display: inline-block;
+
+    &:focus, &:active {
+      background-color: rgba(97, 89, 144, 1);
+    }
+  }
+
+  .profile-image {
+    border-radius: 50%;
+    max-height: 160px;
+    max-width: 160px;
+    box-shadow: 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 3px 0 rgba(0,0,0,.15);
+  }
+
+  .profile-overview {
+    padding-left: $edge-padding;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $small-screen) {
+      padding-left: 0em;
+      text-align: justify;
+    }
+  }
+  .profile-slogan {
+    font-size: 0.8em;
+    font-weight: normal;
+    @media (max-width: $small-screen) {
+      text-align: center;
+      margin-bottom: 0.4em;
+      order: 2;
+    }
+  }
+  .profile-name {
+    color: rgba(255,255,255,1);
+    font-size: 2em;
+    @media (max-width: $small-screen) {
+      order: 1;
+      text-align: center;
+    }
+  }
+  .profile-bio {
+    font-size: 1.2em;
+    font-weight: normal;
+    max-width: 100%;
+    order: 3;
+    flex-shrink: 1;
+    flex-grow: 0;
+    @media (max-width: $small-screen) {
+      max-width: 100%;
+    }
+  }
+}
+
+
+.navigation-content {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1.5px 3px 0 rgba(200,200,200,.15);
+  position: sticky;
+  top: 0;
+  opacity: 1;
+  z-index: 10;
+
+  .navigation-container {
+    padding: 0 $edge-padding;
+  }
+
+  .navigation {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+
+    @media (max-width: $small-screen) {
+      justify-content: space-between;
+    }
+
+    .nav-item {
+      text-transform: uppercase;
+      margin-right: $edge-padding;
+
+      @media (max-width: $small-screen) {
+        margin-right: 0;
+      }
+      &:last-child {
+        margin-left: 0;
+      }
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: rgba(0, 0, 0, 1);
+        font-weight: 700;
+        padding: 1em 0;
+        font-size: 0.8em;
+
+        &:hover, &:focus {
+          color: rgba(132, 89, 144, 1);
+        }
+        &:active, &.active {
+          color: rgba(132, 89, 144, 0.85);
+        }
+      }
+    }
+  }
+}
+
+
+.about-me {
+  .about-title {
+    flex-shrink: 0;
+    padding-right: $edge-padding;
+
+    @media (max-width: $small-screen) {
+       line-height: inherit;
+    }
+  }
+
+  .about-content {
+    margin: 0;
+  }
+
+  .about-container {
+    display: flex;
+    align-items: flex-start;
+    padding: $edge-padding;
+
+    @media (max-width: $small-screen) {
+      flex-direction: column;
+    }
+  }
+}
+
+.portfolio-header {
+  padding: 0 $edge-padding;
+  padding-top: $edge-padding;
+  background-color: rgba(255,255,255,1);
+}
+
+.projects-list {
+  .projects-item {
+    &:nth-child(odd) {
+      background-color: rgba(255,255,255,1);
+    }
+  }
+}
+
+.portfolio {
+  .portfolio-header {
+    padding: 0 $edge-padding;
+    padding-top: $edge-padding;
+    background-color: rgba(255,255,255,1);
+  }
+
+  .projects-list.visible .projects-item:first-child .max-width {
+    padding-top: 0;
+  }
+}
+
+.project {
+  display: block;
+
+  .max-width {
+    padding: $edge-padding*2 $edge-padding;
+    display: flex;
+
+    @media (max-width: $small-screen) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+
+  .project-image-container {
+    width: 50%;
+    flex-shrink: 0;
+    max-height: 800px;
+    overflow-y: hidden;
+    min-height: 280px;
+
+    .project-image {
+      max-width: 100%;
+    }
+  }
+
+  .project-content {
+    @media (max-width: $small-screen) {
+      width: 100%;
+      padding: 0;
+    }
+    width: 50%;
+    flex-shrink: 0;
+    padding: 0 0 0 $edge-padding*2;
+  }
+
+
+  .project-name {
+    font-size: 1em;
+    color: rgba(0,0,0,1);
+  }
+
+  .project-description {
+    font-size: 1em;
+  }
+
+  .project-built-with {
+    font-size: 0.8em;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 1em;
+
+    span {
+      color: purple;
+    }
+  }
+
+  .project-tech {
+    display: flex;
+    flex-grow: 0;
+    flex-flow: wrap;
+  }
+
+  .project-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+
+    .project-client {
+      margin-right: 1em;
+    }
+
+    @media (max-width: $small-screen) {
+      justify-content: flex-start;
+      flex-direction: column;
+
+    }
+
+    span:first-child {
+      color: purple;
+      margin-right: 3px;
+    }
+  }
+
+
+  .project-tech-entry {
+    &:last-child:after {
+      content: "";
+    }
+
+    &:after {
+      content: ", ";
+      padding-right: 3px;
+    }
+  }
+
+}
+
+.more-projects {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity ease-in 450ms;
+
+  &.expand {
+    height: auto;
+    overflow: visible;
+    opacity: 1;
+  }
+}

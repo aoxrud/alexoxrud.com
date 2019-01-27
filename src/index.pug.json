@@ -1,0 +1,222 @@
+{
+  "siteTitle": "Alex Oxrud - Full-Stack Developer",
+  "author": "Alex Oxrud",
+  "slogan": "Full-Stack Web Developer",
+  "profileImage": "images/alex-profile.jpg",
+  "profileImageSocial": "images/alex-profile-social.jpg",
+  "profileImageHeight": 160,
+  "profileImageWidth": 160,
+  "url": "www.alexoxrud.com",
+  "bio": "Over 10 years experience in designing, building, and deploying websites and apps.",
+  "phoneNumber": "(801) 285 - 9772",
+  "emailAddress": "alex.oxrud@gmail.com",
+  "location": "Salt Lake City, UT",
+  "linkedinUrl": "https://www.linkedin.com/in/alex-oxrud-5811bb3b",
+  "aboutMe": "I am a full-stack developer living in Salt Lake City, UT who loves to deliver superior digital products and help businesses succeed with their goals. I am interested in creating scalable web apps with exceptional UI/UX. I spend my days leading the frontend web app for Weight Watchers, Inc. ",
+  "projects": [
+    {
+      "name": "Clinical Trial App",
+      "role": "Full-Stack Developer",
+      "client": "Weight Watchers",
+      "description": "In order test the efficacy of a new points program, now called \"Smart Points\", Weight Watchers needed an app to test it. We put the new algorithm to the test with hundreds of participants and even had  Oprah Winfrey as a special tester.",
+      "tech": ["Angular 1.x", "ElasticSearch", "Express", "Laravel 4", "Cordova", "SASS", "Amazon AWS", "LocalStorage"],
+      "imageMode": "app",
+      "images": [
+        {"src": "images/projects/ww/app@475.png", "alt": "Various Screenshots of SmartPoints App", "srcset": "images/projects/ww/app@475.png 475w, images/projects/ww/app.png 700w"}
+      ]
+    },
+    {
+      "name": "Food & Activity Tracking Web App",
+      "role": "Senior Front-end Engineer",
+      "client": "Weight Watchers",
+      "description": "Currently leading front end development of Weight Watcher's online tool to track food, exercise and weight. Used by millions of people each month, the web experience ties in with WW's suite of apps to help their members's lose weight and live healthy lives.",
+      "tech": ["MEAN Stack", "Algoliasearch", "Grunt", "SASS"],
+      "imageMode": "site",
+      "images": [
+        {"src": "images/projects/ww/square@475.jpg", "alt": "Weight Watchers Online Tool", "srcset": "images/projects/ww/square@475.jpg 475w, images/projects/ww/square.jpg 700w"}
+      ]
+    },
+    {
+      "name": "Hostus App",
+      "client": "Hostus, Inc",
+      "role": "Chief Technical Officer",
+      "description": "A startup aiming to disrupt the restaurant reservation space, Hostus focused on enabling hosts to effectively manage the complexities of running a restaurant. ",
+      "tech": ["BackboneJS", "Couchbase", "Titanium Appcelerator", "Stripe", "Twilio", "Linode", "Laravel 4"],
+      "imageMode": "app",
+      "images": [
+        {"src": "images/projects/hostus/app@475.png", "alt": "Hostus App Floorplan View", "srcset": "images/projects/hostus/app@475.png 475w, images/projects/hostus/app.png 700w"}
+      ]
+    },
+
+    {
+      "name": "Small business website",
+      "client": "DialogueWORKS",
+      "role": "Full-Stack Developer",
+      "description": "Business communication training that helps individuals, teams, and leaders learn to hold conversations that achieve results. Website built on a custom content management system.",
+      "tech": ["LAMP Stack", "Bootstrap", "Authorize.NET", "ConstantContact", "InfusionSoft"],
+      "imageMode": "site",
+      "images": [
+        {"src": "images/projects/dw/site-square@475.jpg", "alt": "DialogueWORKS Homepage", "srcset": "images/projects/dw/site-square@475.jpg 475w, images/projects/dw/site-square.jpg 700w"}
+      ]
+    },
+
+    {
+      "name": "Real Talk App",
+      "role": "Full-Stack Developer",
+      "client": "DialogueWORKS",
+      "description": "Mobile app tool for improving the quality and effectiveness of interpersonal interactions. The app guides an individual on how to structure an effective conversation.",
+      "tech": ["Ionic Framework", "Cordova", "SASS", "LocalStorage"],
+      "imageMode": "app",
+      "images": [
+        {"src": "images/projects/dw/app.png", "alt": "Various Screenshots of Real Talk App", "srcset": "images/projects/dw/app.png 475w"},
+        {"src": "images/projects/dw/app1.png"},
+        {"src": "images/projects/dw/app2.png"},
+        {"src": "images/projects/dw/app4.png"}
+      ]
+    },
+
+    {
+      "name": "Small e-commerce website",
+      "client": "Good Health Technology",
+      "role": "Full-Stack Developer",
+      "description": "Fully customized e-commerce site of homeopathic products, complete with automatic shipping label printing and a detailed analytics report on sales performance.",
+      "tech": ["LAMP Stack", "Python", "Pinnacle Cart", "BluePay", "PayPal", "Google Charts", "Bootstrap"],
+      "imageMode": "site",
+      "images": [
+        {"src": "images/projects/ght/square.jpg", "alt": "Good Health Technology Website", "srcset": "images/projects/ght/square.jpg 800w"}
+      ]
+    },
+
+    {
+      "name": "Large e-commerce website",
+      "client": "Beckertime, LLC",
+      "role": "Developer",
+      "description": "Internet's premier distributors of preowned Rolex watches. Hired to enhance search system and address performance bottlenecks.",
+      "tech": ["LAMP Stack", "Wordpress", "ElasticSearch", "WooCommerce"],
+      "imageMode": "site",
+      "images": [
+        {"src": "images/projects/beckertime/site.jpg", "alt": "Beckertime Website", "srcset": "images/projects/beckertime/site.jpg 700w"}
+      ]
+    },
+
+    {
+      "name": "Wrist Watch Community and e-commerce ",
+      "client": "Time Keeper Forum",
+      "role": "Senior Developer",
+      "description": "A community for watch & horology discussion. Enhanced existing forum with fully-featured portal and marketplace.",
+      "tech": ["LAMP Stack", "XenForo", "ElasticSearch", "Laravel 4", "Bootstrap", "Angular 1.x", "PayPal"],
+      "imageMode": "site",
+      "images": [
+        {"src": "images/projects/tkf/square.jpg", "alt": "Time Keeper Forum Website", "srcset": "images/projects/tkf/square.jpg 800w"}
+      ]
+    },
+    {
+      "name": "Movie Club Web App",
+      "client": "Movie Club",
+      "role": "Full-Stack Developer",
+      "description": "Searchable catalogue of movies that allow streaming on multiple devices via the browser. Uses IMDB and Netflix to enhance the movie details and ratings.",
+      "tech": ["LAMP Stack", "BackboneJS", "Bootstrap", "SQLite"],
+      "imageMode": "site",
+      "images": [
+        {"src": "images/projects/movieclub/site.jpg", "alt": "Movie Club Website", "srcset": "images/projects/movieclub/site.jpg 700w"}
+      ]
+    }
+  ],
+  "abilities": {
+    "Product Management": [
+      "Scrum / Agile Development",
+      "Time / Cost Estimates",
+      "User Experience Wireframes",
+      "Engineering Recruiting",
+      "Tech Architecture Consulting"
+    ],
+    "Miscellaneous": [
+      "Responsive Design",
+      "Web Accessibility",
+      "Search Engine Optimization",
+      "SOAP",
+      "RESTful",
+      "JIRA"
+    ],
+    "Languages": [
+      "Javascript",
+      "PHP",
+      "Java",
+      "Python",
+      "Actionscript 3",
+      "VB.NET",
+      "Bash",
+      "HTML5",
+      "Pug",
+      "CSS3",
+      "SASS"
+    ],
+    "Databases": [
+      "SQL",
+      "MySQL",
+      "CouchDB",
+      "Couchbase",
+      "SQLite",
+      "Elasticsearch",
+      "Algolia",
+      "MongoDB"
+    ],
+    "Server / Deployment": [
+      "Apache2",
+      "Nodejs",
+      "NGINX",
+      "Heroku",
+      "AWS",
+      "Red5"
+    ],
+    "Testing": [
+      "PHPUnit",
+      "JSDoc",
+      "Karma",
+      "Jasmine"
+    ],
+    "Tools": [
+      "Grunt",
+      "Gulp",
+      "Browserify",
+      "BrowserSync",
+      "Bower"
+    ],
+    "Source Control": [
+      "Mercurial",
+      "Git",
+      "Subversion"
+    ],
+    "Frameworks": [
+      "AngularJS",
+      "React",
+      "jQuery",
+      "Backbone.js",
+      "Titanium Mobile Framework",
+      "Ionic Framework",
+      "Bootstrap",
+      "Materialize CSS",
+      "Semantic UI",
+      "Cordova / PhoneGAP",
+      "Facebook JS API",
+      "Google Client API",
+      "Yahoo API",
+      "eBay SDK",
+      "Stamps.com Postage API",
+      "Twilio",
+      "Laravel",
+      "Express",
+      "Authorize.NET",
+      "Stripe",
+      "Bluepay",
+      "PayPal",
+      "iContact",
+      "ConstantContact",
+      "InfusionSoft",
+      "Highrise CRM API",
+      "Amazon Web Services",
+      "IMDB API",
+      "Netflix API"
+    ]
+  }
+}

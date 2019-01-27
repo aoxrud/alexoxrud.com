@@ -1,0 +1,30 @@
+{
+  "short_name": "AlexOxrud",
+  "name": "Alex Oxrud - Full-Stack Software Developer",
+  "display": "standalone",
+  "background_color": "#613D62",
+  "theme_color": "#613D62",
+  "icons": [
+    {
+      "src": "images/icons/icon-48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "images/icons/icon-96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "images/icons/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/icons/splash.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?launcher=true"
+}
