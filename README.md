@@ -1,5 +1,5 @@
 # alexoxrud.com
-The goal of this project was to have a web presence as a developer and also demonstrate some best practices in order to deliver a fast experience.
+The goal of this project was to have a web presence as a developer and to also demonstrate some best practices in order to deliver a fast experience.
 I've kept it as simple as possible by using pug as the html preprocessor and feeding it data from a regular json file.
 
 
