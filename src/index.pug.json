@@ -1,29 +1,101 @@
 {
   "siteTitle": "Alex Oxrud - Full-Stack Developer",
   "author": "Alex Oxrud",
-  "slogan": "Full-Stack Web Developer",
+  "slogan": "Full-Stack Software Developer",
   "profileImage": "images/alex-profile.jpg",
   "profileImageSocial": "images/alex-profile-social.jpg",
   "profileImageHeight": 160,
   "profileImageWidth": 160,
   "url": "www.alexoxrud.com",
   "bio": "Over 10 years experience in designing, building, and deploying websites and apps.",
-  "phoneNumber": "(801) 285 - 9772",
   "emailAddress": "alex.oxrud@gmail.com",
   "location": "Salt Lake City, UT",
   "linkedinUrl": "https://www.linkedin.com/in/alex-oxrud-5811bb3b",
   "githubUrl": "https://github.com/aoxrud-ww",
-  "aboutMe": "I am a full-stack developer living in Salt Lake City, UT who loves to deliver superior digital products and help businesses succeed with their goals. I am interested in creating scalable web apps with exceptional UI/UX. I spend my days leading the frontend web app for Weight Watchers, Inc. ",
+  "aboutMe": "I am a full-stack software developer living in Salt Lake City, UT who loves to deliver superior digital products and help businesses succeed with their goals. I have proven experience in crafting elegant, maintainable, and high-impact software that solve key business problems.",
+  "articles": [
+    {
+      "name": "Replacing an existing backend service: A retrospective",
+      "description": "How we replaced the legacy health tracking system that is responsible for tracking sleep, weight, and exercise data and some of the lessons we learned along the way.",
+      "image": "images/articles/health-tracking-service.jpg",
+      "url": "https://medium.com/ww-tech-blog/replacing-an-existing-backend-service-a-retrospective-f4df68d3014a"
+    },
+    {
+      "name": "Web Accessibility Tips and Tricks",
+      "description": "How we managed to create accessible web pages that work with most modern assistive technologies.",
+      "image": "images/articles/web-accessibility.jpg",
+      "url": "https://medium.com/ww-tech-blog/web-accessibility-tips-and-tricks-8f71bb716c40"
+    },
+    {
+      "name": "Optimizing search-as-you-type from the front-end perspective",
+      "description": "A great search experience is one that is fast and responsive and that provides users with what they seek.",
+      "image": "images/articles/search.png",
+      "url": "https://medium.com/ww-tech-blog/optimizing-search-as-you-type-from-the-front-end-perspective-2455caa58c13"
+    }
+  ],
   "projects": [
+    {
+      "name": "E-Commerce Website",
+      "role": "Full-Stack Developer",
+      "client": "Roseshire",
+      "description": "E-commerce website built on Shopify that sells premium flowers. Accompanying order management app to help them schedule and deliver fresh roses in a cost-efficient manner.",
+      "tech": ["Shopify", "Liquid", "PostgreSQL", "Javascript", "SCSS", "Heroku"],
+      "imageMode": "app",
+      "images": [
+        {
+          "src": "images/projects/roseshire/homepage2.png",
+          "alt": "Feelcove homepage and product page",
+          "srcset": ""
+        }
+      ]
+    },
+    {
+      "name": "E-Commerce Website",
+      "role": "Full-Stack Developer",
+      "client": "Feelmore Labs, Inc",
+      "description": "Headless e-commerce website that sold a device to improve sleep and reduce stress. It was built on Gatsby.js and powered by Shopify, Contentful, and Optimizely.",
+      "tech": [
+        "React",
+        "GraphQL",
+        "Node",
+        "Braze",
+        "Gatsby.js",
+        "Contentful",
+        "Shopify",
+        "Optimizely",
+        "Heroku"
+      ],
+      "imageMode": "app",
+      "images": [
+        {
+          "src": "images/projects/feelcove/featured.png",
+          "alt": "Feelcove homepage and product page",
+          "srcset": ""
+        }
+      ]
+    },
     {
       "name": "Clinical Trial App",
       "role": "Full-Stack Developer",
       "client": "Weight Watchers",
       "description": "In order test the efficacy of a new points program, now called \"Smart Points\", Weight Watchers needed an app to test it. We put the new algorithm to the test with hundreds of participants and even had  Oprah Winfrey as a special tester.",
-      "tech": ["Angular 1.x", "ElasticSearch", "Express", "Laravel 4", "Cordova", "SASS", "Amazon AWS", "LocalStorage"],
+      "tech": [
+        "Angular 1.x",
+        "ElasticSearch",
+        "Express",
+        "Laravel 4",
+        "Cordova",
+        "SASS",
+        "Amazon AWS",
+        "LocalStorage"
+      ],
       "imageMode": "app",
       "images": [
-        {"src": "images/projects/ww/app@475.png", "alt": "Various Screenshots of SmartPoints App", "srcset": "images/projects/ww/app@475.png 475w, images/projects/ww/app.png 700w"}
+        {
+          "src": "images/projects/ww/app@475.png",
+          "alt": "Various Screenshots of SmartPoints App",
+          "srcset": "images/projects/ww/app@475.png 475w, images/projects/ww/app.png 700w"
+        }
       ]
     },
     {
@@ -34,7 +106,11 @@
       "tech": ["MEAN Stack", "Algoliasearch", "Grunt", "SASS"],
       "imageMode": "site",
       "images": [
-        {"src": "images/projects/ww/square@475.jpg", "alt": "Weight Watchers Online Tool", "srcset": "images/projects/ww/square@475.jpg 475w, images/projects/ww/square.jpg 700w"}
+        {
+          "src": "images/projects/ww/square@475.jpg",
+          "alt": "Weight Watchers Online Tool",
+          "srcset": "images/projects/ww/square@475.jpg 475w, images/projects/ww/square.jpg 700w"
+        }
       ]
     },
     {
@@ -42,10 +118,22 @@
       "client": "Hostus, Inc",
       "role": "Chief Technical Officer",
       "description": "A startup aiming to disrupt the restaurant reservation space, Hostus focused on enabling hosts to effectively manage the complexities of running a restaurant. ",
-      "tech": ["BackboneJS", "Couchbase", "Titanium Appcelerator", "Stripe", "Twilio", "Linode", "Laravel 4"],
+      "tech": [
+        "BackboneJS",
+        "Couchbase",
+        "Titanium Appcelerator",
+        "Stripe",
+        "Twilio",
+        "Linode",
+        "Laravel 4"
+      ],
       "imageMode": "app",
       "images": [
-        {"src": "images/projects/hostus/app@475.png", "alt": "Hostus App Floorplan View", "srcset": "images/projects/hostus/app@475.png 475w, images/projects/hostus/app.png 700w"}
+        {
+          "src": "images/projects/hostus/app@475.png",
+          "alt": "Hostus App Floorplan View",
+          "srcset": "images/projects/hostus/app@475.png 475w, images/projects/hostus/app.png 700w"
+        }
       ]
     },
 
@@ -54,10 +142,20 @@
       "client": "DialogueWORKS",
       "role": "Full-Stack Developer",
       "description": "Business communication training that helps individuals, teams, and leaders learn to hold conversations that achieve results. Website built on a custom content management system.",
-      "tech": ["LAMP Stack", "Bootstrap", "Authorize.NET", "ConstantContact", "InfusionSoft"],
+      "tech": [
+        "LAMP Stack",
+        "Bootstrap",
+        "Authorize.NET",
+        "ConstantContact",
+        "InfusionSoft"
+      ],
       "imageMode": "site",
       "images": [
-        {"src": "images/projects/dw/site-square@475.jpg", "alt": "DialogueWORKS Homepage", "srcset": "images/projects/dw/site-square@475.jpg 475w, images/projects/dw/site-square.jpg 700w"}
+        {
+          "src": "images/projects/dw/site-square@475.jpg",
+          "alt": "DialogueWORKS Homepage",
+          "srcset": "images/projects/dw/site-square@475.jpg 475w, images/projects/dw/site-square.jpg 700w"
+        }
       ]
     },
 
@@ -69,10 +167,14 @@
       "tech": ["Ionic Framework", "Cordova", "SASS", "LocalStorage"],
       "imageMode": "app",
       "images": [
-        {"src": "images/projects/dw/app.png", "alt": "Various Screenshots of Real Talk App", "srcset": "images/projects/dw/app.png 475w"},
-        {"src": "images/projects/dw/app1.png"},
-        {"src": "images/projects/dw/app2.png"},
-        {"src": "images/projects/dw/app4.png"}
+        {
+          "src": "images/projects/dw/app.png",
+          "alt": "Various Screenshots of Real Talk App",
+          "srcset": "images/projects/dw/app.png 475w"
+        },
+        { "src": "images/projects/dw/app1.png" },
+        { "src": "images/projects/dw/app2.png" },
+        { "src": "images/projects/dw/app4.png" }
       ]
     },
 
@@ -81,10 +183,22 @@
       "client": "Good Health Technology",
       "role": "Full-Stack Developer",
       "description": "Fully customized e-commerce site of homeopathic products, complete with automatic shipping label printing and a detailed analytics report on sales performance.",
-      "tech": ["LAMP Stack", "Python", "Pinnacle Cart", "BluePay", "PayPal", "Google Charts", "Bootstrap"],
+      "tech": [
+        "LAMP Stack",
+        "Python",
+        "Pinnacle Cart",
+        "BluePay",
+        "PayPal",
+        "Google Charts",
+        "Bootstrap"
+      ],
       "imageMode": "site",
       "images": [
-        {"src": "images/projects/ght/square.jpg", "alt": "Good Health Technology Website", "srcset": "images/projects/ght/square.jpg 800w"}
+        {
+          "src": "images/projects/ght/square.jpg",
+          "alt": "Good Health Technology Website",
+          "srcset": "images/projects/ght/square.jpg 800w"
+        }
       ]
     },
 
@@ -96,7 +210,11 @@
       "tech": ["LAMP Stack", "Wordpress", "ElasticSearch", "WooCommerce"],
       "imageMode": "site",
       "images": [
-        {"src": "images/projects/beckertime/site.jpg", "alt": "Beckertime Website", "srcset": "images/projects/beckertime/site.jpg 700w"}
+        {
+          "src": "images/projects/beckertime/site.jpg",
+          "alt": "Beckertime Website",
+          "srcset": "images/projects/beckertime/site.jpg 700w"
+        }
       ]
     },
 
@@ -105,10 +223,22 @@
       "client": "Time Keeper Forum",
       "role": "Senior Developer",
       "description": "A community for watch & horology discussion. Enhanced existing forum with fully-featured portal and marketplace.",
-      "tech": ["LAMP Stack", "XenForo", "ElasticSearch", "Laravel 4", "Bootstrap", "Angular 1.x", "PayPal"],
+      "tech": [
+        "LAMP Stack",
+        "XenForo",
+        "ElasticSearch",
+        "Laravel 4",
+        "Bootstrap",
+        "Angular 1.x",
+        "PayPal"
+      ],
       "imageMode": "site",
       "images": [
-        {"src": "images/projects/tkf/square.jpg", "alt": "Time Keeper Forum Website", "srcset": "images/projects/tkf/square.jpg 800w"}
+        {
+          "src": "images/projects/tkf/square.jpg",
+          "alt": "Time Keeper Forum Website",
+          "srcset": "images/projects/tkf/square.jpg 800w"
+        }
       ]
     },
     {
@@ -119,7 +249,11 @@
       "tech": ["LAMP Stack", "BackboneJS", "Bootstrap", "SQLite"],
       "imageMode": "site",
       "images": [
-        {"src": "images/projects/movieclub/site.jpg", "alt": "Movie Club Website", "srcset": "images/projects/movieclub/site.jpg 700w"}
+        {
+          "src": "images/projects/movieclub/site.jpg",
+          "alt": "Movie Club Website",
+          "srcset": "images/projects/movieclub/site.jpg 700w"
+        }
       ]
     }
   ],
@@ -170,24 +304,9 @@
       "AWS",
       "Red5"
     ],
-    "Testing": [
-      "PHPUnit",
-      "JSDoc",
-      "Karma",
-      "Jasmine"
-    ],
-    "Tools": [
-      "Grunt",
-      "Gulp",
-      "Browserify",
-      "BrowserSync",
-      "Bower"
-    ],
-    "Source Control": [
-      "Mercurial",
-      "Git",
-      "Subversion"
-    ],
+    "Testing": ["PHPUnit", "JSDoc", "Karma", "Jasmine"],
+    "Tools": ["Grunt", "Gulp", "Browserify", "BrowserSync", "Bower"],
+    "Source Control": ["Mercurial", "Git", "Subversion"],
     "Frameworks": [
       "AngularJS",
       "React",

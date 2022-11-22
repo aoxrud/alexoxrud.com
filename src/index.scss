@@ -63,6 +63,40 @@ Project Preview
 }
 
 
+.articles {
+  padding-bottom: 4rem;
+
+  .articles-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .project-image {
+    max-width: 100%;
+    border-radius: 5px;
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .article-header {
+    padding: 20px 0 0 20px;
+  }
+
+  .article {
+    display: block;
+    border: 1px solid rgba(0,0,0,.02);
+    background-color: rgba(0,0,0,.02);
+    border-radius: 1rem;
+    padding: 1rem;
+    text-decoration: none;
+    color: #000;
+    height: 100%;
+  }
+}
+
 /**
 
 

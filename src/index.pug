@@ -57,10 +57,22 @@ html(lang="en")
             p.about-content=aboutMe
 
 
+      section.articles#articles
+        .article-header
+          .max-width
+            h2.article-title.main-title#articles-heading Articles I've written
+
+        .max-width
+          ul.articles-list.visible(aria-describedby="articles-heading")
+            - var articleCount = 0;
+            while articleCount < 3
+              li.projects-item
+                +article(articles[articleCount++])
+              
       section.portfolio#portfolio
         .portfolio-header
           .max-width
-            h2.portfolio-title.main-title#portfolio-heading Portfolio
+            h2.portfolio-title.main-title#portfolio-heading Projects I've worked on
 
         ul.projects-list.visible(aria-describedby="portfolio-heading")
           - var projectCount = 0;
@@ -86,10 +98,6 @@ html(lang="en")
         .row
           ul.reach-out(aria-labelledby="get-in-touch")
             li
-              a(href="tel:"+phoneNumber)
-                +icon-smartphone
-                span(id="telephone" itemprop="telephone")=phoneNumber
-            li
               a(href="mailto:"+emailAddress)
                 +icon-email
                 span(id="email", itemprop="email")=emailAddress
@@ -108,7 +116,7 @@ html(lang="en")
 
 
         .footer
-          p.copyright 2019 &copy; Copyright alexoxrud.com
+          p.copyright 2022 &copy; Copyright alexoxrud.com
 
     noscript#deferred-styles
       link(rel='stylesheet', type='text/css', href='css/index.css')
