@@ -64,7 +64,7 @@ Project Preview
 
 
 .articles {
-  padding-bottom: 4rem;
+  padding: $edge-padding $edge-padding 4rem $edge-padding;
 
   .articles-list {
     display: grid;
@@ -82,7 +82,7 @@ Project Preview
   }
 
   .article-header {
-    padding: 20px 0 0 20px;
+    padding-top: 20px;
   }
 
   .article {
