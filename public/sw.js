@@ -1,9 +1,9 @@
 'use strict';
 
-var CACHE_NAME = 'alex-oxrud-com';
+var CACHE_NAME = 'alex-oxrud-2022-11-23';
 
 self.addEventListener('install', function (event) {
-  var urlsToCache = ['/', '/css/index.css', '/images/alex-profile.jpg', 'https://fonts.googleapis.com/css?family=Raleway:300,400,700'];
+  var urlsToCache = ['/images/alex-profile.jpg', 'https://fonts.googleapis.com/css?family=Raleway:300,400,700'];
 
   // Perform install steps
   event.waitUntil(caches.open(CACHE_NAME).then(function (cache) {
