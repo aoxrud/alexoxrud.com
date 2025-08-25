@@ -1,18 +1,20 @@
 /*global require*/
 "use strict";
 
-var gulp = require('gulp'),
-  path = require('path'),
-  data = require('gulp-data'),
-  pug = require('gulp-pug'),
-  prefix = require('gulp-autoprefixer'),
-  sass = require('gulp-sass'),
-  fs = require('fs'),
-  browserSync = require('browser-sync'),
-  babel = require('gulp-babel'),
-  concat = require('gulp-concat'),
-  uglify = require('gulp-uglify'),
-  gulpCopy = require('gulp-copy');
+import gulp from 'gulp';
+import path from 'path';
+import data from 'gulp-data';
+import pug from 'gulp-pug';
+import prefix from 'gulp-autoprefixer';
+import gulpSass from 'gulp-sass';
+import fs from 'fs';
+import browserSync from 'browser-sync';
+import babel from 'gulp-babel';
+import concat from 'gulp-concat';
+import uglify from 'gulp-uglify';
+import dartSass from 'sass';
+
+const sass = gulpSass(dartSass);
 
 /*
  * Directories here
@@ -48,23 +50,6 @@ gulp.task('pug', function () {
     }));
 });
 
-
-/**
- * Wait for pug and sass tasks, then launch the browser-sync Server
- */
-gulp.task('browser-sync', ['sass', 'pug', 'babel'], function () {
-  browserSync({
-    server: {
-      baseDir: paths.public
-    },
-    serveStatic: [{
-      route: '/node_modules',
-      dir: 'node_modules'
-    }],
-    notify: false
-  });
-});
-
 /**
  * Compile .scss files into public css directory With autoprefixer no
  * need for vendor prefixes then live reload the browser.
@@ -91,13 +76,30 @@ gulp.task('sass', function () {
 gulp.task('babel', function () {
   return gulp.src('./src/**/*.js')
     .pipe(babel({
-      presets: ['es2015']
+      // presets: ['preset-env']
     }))
     .pipe(gulp.dest('./public/'))
     .pipe(browserSync.reload({
       stream: true
     }));
 });
+
+
+/**
+ * Wait for pug and sass tasks, then launch the browser-sync Server
+ */
+gulp.task('browser-sync', gulp.series(['sass', 'pug', 'babel', function () {
+  browserSync({
+    server: {
+      baseDir: paths.public
+    },
+    serveStatic: [{
+      route: '/node_modules',
+      dir: 'node_modules'
+    }],
+    notify: false
+  });
+}]));
 
 /**
  * Watch scss files for changes & recompile
@@ -126,11 +128,14 @@ gulp.task('copy-assets', function () {
 });
 
 // Build task compile sass and pug.
-gulp.task('build', ['sass', 'pug']);
+gulp.task('build', gulp.series(['sass', 'pug']));
 
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync then watch
  * files for changes
  */
-gulp.task('default', ['copy-assets', 'browser-sync', 'watch']);
+const build = gulp.series(['copy-assets', 'browser-sync', 'watch'])
+gulp.task('default',  build);
+
+export default build;
