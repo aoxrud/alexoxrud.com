@@ -35,6 +35,21 @@
   ],
   "projects": [
     {
+      "name": "Job Board",
+      "role": "Engineering Manager",
+      "client": "Glassdoor",
+      "description": "Job search web application used by millions of users per month in partnership with Indeed.",
+      "tech": ["Typescript", "GraphQL", "Next.js", "Node", "SCSS", "Jest"],
+      "imageMode": "app",
+      "images": [
+        {
+          "src": "images/projects/gd/glassdoor-serp.png",
+          "alt": "Glassdoor's Job Search Page",
+          "srcset": ""
+        }
+      ]
+    },
+    {
       "name": "E-Commerce Website",
       "role": "Full-Stack Developer",
       "client": "Roseshire",
@@ -44,7 +59,7 @@
       "images": [
         {
           "src": "images/projects/roseshire/homepage2.png",
-          "alt": "Feelcove homepage and product page",
+          "alt": "Roseshire homepage",
           "srcset": ""
         }
       ]
